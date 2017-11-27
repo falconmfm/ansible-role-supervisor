@@ -29,6 +29,7 @@ supervisor_programs: []
 supervisor_nodaemon: false
 
 supervisor_log_dir: /var/log/supervisor
+supervisor_log_level: info
 
 supervisor_user: root
 supervisor_password: 'my_secret_password'

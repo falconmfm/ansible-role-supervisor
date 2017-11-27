@@ -2,10 +2,10 @@
 nodaemon = {{ supervisor_nodaemon }}
 childlogdir = {{ supervisor_log_dir }}
 user = {{ supervisor_user }}
-logfile=/var/logs/supervisord.log 
+logfile=/var/log/supervisord.log 
 logfile_maxbytes=50MB      
 logfile_backups=10          
-loglevel=info               
+loglevel={{ supervisor_log_level }}       
 pidfile=/var/run/supervisord.pid 
 
 {% if supervisor_unix_http_server_enable %}
