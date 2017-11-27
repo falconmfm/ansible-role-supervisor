@@ -7,14 +7,12 @@
     name: supervisor
     state: present
     version: "{{ supervisor_version }}"
-    environment: "{{proxy_env}}"
   when: supervisor_version != 'latest'
 
 - name: Ensure Supervisor is installed (latest version).
   pip:
     name: supervisor
     state: present 
-    environment: "{{proxy_env}}"
   when: supervisor_version == 'latest'
 
 - name: Ensure Supervisor log dir exists.
